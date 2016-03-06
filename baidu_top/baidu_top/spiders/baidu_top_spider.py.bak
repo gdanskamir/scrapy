@@ -1,0 +1,131 @@
+#-*- coding:UTF-8 -*-
+import scrapy
+
+class BaiduTopSpider(scrapy.spider.Spider):
+    name = "baidu_top"
+    allowed_domains = ["top.baidu.com"]
+    start_urls = [
+            "http://top.baidu.com/boards?fr=topcategory_c18",
+            "http://top.baidu.com/./buzz?b=2",
+            "http://top.baidu.com/./buzz?b=396",
+            "http://top.baidu.com/./buzz?b=258",
+            "http://top.baidu.com/./buzz?b=618",
+            "http://top.baidu.com/./buzz?b=3",
+            "http://top.baidu.com/./buzz?b=22",
+            "http://top.baidu.com/./buzz?b=18",
+            "http://top.baidu.com/./buzz?b=17",
+            "http://top.baidu.com/./buzz?b=16",
+            "http://top.baidu.com/./buzz?b=15",
+            "http://top.baidu.com/./buzz?b=454",
+            "http://top.baidu.com/./buzz?b=493",
+            "http://top.baidu.com/./buzz?b=491",
+            "http://top.baidu.com/./buzz?b=255",
+            "http://top.baidu.com/./buzz?b=261",
+            "http://top.baidu.com/./buzz?b=257",
+            "http://top.baidu.com/./buzz?b=259",
+            "http://top.baidu.com/./buzz?b=260",
+            "http://top.baidu.com/./buzz?b=612",
+            "http://top.baidu.com/./buzz?b=7",
+            "http://top.baidu.com/./buzz?b=353",
+            "http://top.baidu.com/./buzz?b=355",
+            "http://top.baidu.com/./buzz?b=354",
+            "http://top.baidu.com/./buzz?b=356",
+            "http://top.baidu.com/./buzz?b=459",
+            "http://top.baidu.com/./buzz?b=1508",
+            "http://top.baidu.com/./buzz?b=1509",
+            "http://top.baidu.com/./buzz?b=1510",
+            "http://top.baidu.com/./buzz?b=1512",
+            "http://top.baidu.com/./buzz?b=1513",
+            "http://top.baidu.com/./buzz?b=1",
+            "http://top.baidu.com/./buzz?b=341",
+            "http://top.baidu.com/./buzz?b=42",
+            "http://top.baidu.com/./buzz?b=342",
+            "http://top.baidu.com/./buzz?b=344",
+            "http://top.baidu.com/./buzz?b=11",
+            "http://top.baidu.com/./buzz?b=173",
+            "http://top.baidu.com/./buzz?b=62",
+            "http://top.baidu.com/./buzz?b=451",
+            "http://top.baidu.com/./buzz?b=61",
+            "http://top.baidu.com/./buzz?b=524",
+            "http://top.baidu.com/./buzz?b=523",
+            "http://top.baidu.com/./buzz?b=176",
+            "http://top.baidu.com/./buzz?b=179",
+            "http://top.baidu.com/./buzz?b=285",
+            "http://top.baidu.com/./buzz?b=177",
+            "http://top.baidu.com/./buzz?b=178",
+            "http://top.baidu.com/./buzz?b=180",
+            "http://top.baidu.com/./buzz?b=281",
+    "http://top.baidu.com/./buzz?b=283",
+    "http://top.baidu.com/./buzz?b=282",
+    "http://top.baidu.com/./buzz?b=284",
+    "http://top.baidu.com/./buzz?b=420",
+    "http://top.baidu.com/./buzz?b=12",
+    "http://top.baidu.com/./buzz?b=302",
+    "http://top.baidu.com/./buzz?b=14",
+    "http://top.baidu.com/./buzz?b=280",
+    "http://top.baidu.com/./buzz?b=270",
+    "http://top.baidu.com/./buzz?b=291",
+    "http://top.baidu.com/./buzz?b=44",
+    "http://top.baidu.com/./buzz?b=24",
+    "http://top.baidu.com/./buzz?b=414",
+    "http://top.baidu.com/./buzz?b=450",
+    "http://top.baidu.com/./buzz?b=367",
+    "http://top.baidu.com/./buzz?b=505",
+    "http://top.baidu.com/./buzz?b=238",
+    "http://top.baidu.com/./buzz?b=237",
+    "http://top.baidu.com/./buzz?b=402",
+    "http://top.baidu.com/./buzz?b=51",
+    "http://top.baidu.com/./buzz?b=20",
+    "http://top.baidu.com/./buzz?b=274",
+    "http://top.baidu.com/./buzz?b=277",
+    "http://top.baidu.com/./buzz?b=276",
+    "http://top.baidu.com/./buzz?b=412",
+    "http://top.baidu.com/./buzz?b=411",
+    "http://top.baidu.com/./buzz?b=286",
+    "http://top.baidu.com/./buzz?b=495",
+    "http://top.baidu.com/./buzz?b=497",
+    "http://top.baidu.com/./buzz?b=496",
+    "http://top.baidu.com/./buzz?b=415",
+    "http://top.baidu.com/./buzz?b=506",
+    "http://top.baidu.com/./buzz?b=507",
+    "http://top.baidu.com/./buzz?b=508",
+    "http://top.baidu.com/./buzz?b=509",
+    "http://top.baidu.com/./buzz?b=511",
+    "http://top.baidu.com/./buzz?b=512",
+    "http://top.baidu.com/./buzz?b=514",
+    "http://top.baidu.com/./buzz?b=515",
+    "http://top.baidu.com/./buzz?b=516",
+    "http://top.baidu.com/./buzz?b=517",
+    "http://top.baidu.com/./buzz?b=518",
+    "http://top.baidu.com/./buzz?b=519",
+    "http://top.baidu.com/./buzz?b=520",
+    "http://top.baidu.com/./buzz?b=525",
+    "http://top.baidu.com/./buzz?b=526",
+    "http://top.baidu.com/./buzz?b=527",
+    "http://top.baidu.com/./buzz?b=528",
+    "http://top.baidu.com/./buzz?b=529",
+    "http://top.baidu.com/./buzz?b=530"
+            ]
+
+    def parse(self, response):
+        ##提取元素
+
+        for link in response.xpath('//html/body/div[@class="wrapper"]/div[@class="main"]/div[@class="all-list"]'):
+            top_class = link.xpath('div[@class="hd"]/h3[@class="title"]/a/text()').extract()[1].encode('UTF-8', 'ignore').strip();
+            for inner_link in link.xpath('div[@class="bd"]/div[@class="links"]/a'):
+                url = inner_link.xpath('@href').extract()[0].encode('UTF-8', 'ignore').strip();
+                anchor = inner_link.xpath('text()').extract()[0].encode('UTF-8', 'ignore').strip();
+                print top_class + "\thttp://top.baidu.com/" + url + "\t" + anchor;
+                #start_urls.append("http://top.baidu.com/" + url)
+                
+        title = ";".join(response.xpath('/html/head/title/text()').extract()).encode('UTF-8', 'ignore');
+
+        for link in response.xpath('//div[@class="wrapper"]/div[@class="main"]/div[@class="mainBody"]/div[@class="grayborder"]/table[@class="list-table"]/tr/td[@class="keyword"]'):
+        #for link in response.xpath('//div/div[@class="wrap c"]/div[@class="main"]/div[@class="mainBody"]/div[@class="mainCon"]/div[@class="list c"]/ul/li'):
+            link_anchor = link.xpath('a[@class="list-title"]/text()').extract()[0].encode('UTF-8', 'ignore');
+            link_url = link.xpath('a[@class="list-title"]/@href').extract()[0].encode('UTF-8', 'ignore');
+            print response.url + "\t" + title + "\t" + link_anchor + "\t" + link_url;
+
+        #filename = response.url.split("/")[-2]
+        #with open(filename, 'wb') as f:
+        #    f.write(response.body)
